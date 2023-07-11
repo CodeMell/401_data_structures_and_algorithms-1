@@ -5,7 +5,7 @@ namespace CodeChallenges
         public static int[] InsertShiftArray(int[] array, int value)
         {
             //insert the value into the middle of the array
-            int length = array.Length;
+          int length = array.Length;
           int[] newArray = new int[length + 1];
 
           int middleIndex = length / 2;
