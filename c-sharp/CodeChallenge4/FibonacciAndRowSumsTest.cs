@@ -101,5 +101,44 @@ namespace CodeChallengeTests
       // Assert
       Assert.Equal(expectedResult, result);
     }
+
+    [Fact]
+    public void Fibonacci_Can_Get_5th_Number()
+    {
+      // Arrange
+      int nth = 5;
+      int expectedResult = 3;
+      // Act
+      int result = CodeChallenge4.GetNthNumberInFibonacciSequence(nth);
+
+      // Assert
+      Assert.Equal(expectedResult, result);
+    }
+
+    [Fact]
+    public void Fibonacci_Can_Get_10th_Number()
+    {
+      // Arrange
+      int nth = 10;
+      int expectedResult = 34;
+      // Act
+      int result = CodeChallenge4.GetNthNumberInFibonacciSequence(nth);
+
+      // Assert
+      Assert.Equal(expectedResult, result);
+    }
+
+    [Fact]
+    public void Fibonacci_Can_Get_First_Number()
+    {
+      // Arrange
+      int nth = 1;
+      int expectedResult = 0;
+      // Act
+      int result = CodeChallenge4.GetNthNumberInFibonacciSequence(nth);
+
+      // Assert
+      Assert.Equal(expectedResult, result);
+    }
   }
 }

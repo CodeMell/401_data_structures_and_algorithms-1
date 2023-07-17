@@ -8,7 +8,7 @@ namespace CodeChallengeTests
     [Fact]
     public void ZipLinkedList_Test()
     {
-      Assert.Equal(true, true);
+      Assert.Equal(true, false);
     }
   }
 }

@@ -8,7 +8,7 @@ namespace CodeChallengeTests
     [Fact]
     public void StackAndQueue_Can_Push_Value_Test()
     {
-      Assert.Equal(true, true);
+      Assert.Equal(true, false);
     }
   }
 }

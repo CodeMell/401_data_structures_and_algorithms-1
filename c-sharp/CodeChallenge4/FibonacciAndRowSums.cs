@@ -4,8 +4,17 @@ namespace CodeChallenges
   {
     public static int GetNthNumberInFibonacciSequence(int nthNumberInSequence)
     {
+<<<<<<< HEAD
       if (nthNumberInSequence <= 0)
         
+=======
+        public static int GetNthNumberInFibonacciSequence(int nthNumberInSequence)
+        {
+            int result = 0;
+
+            return result;
+        }
+>>>>>>> f95aece7280d55767644e45f3d97e202f4703c2f
 
       if (nthNumberInSequence == 1 || nthNumberInSequence == 2)
         return 1;

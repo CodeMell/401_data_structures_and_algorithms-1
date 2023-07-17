@@ -8,13 +8,13 @@ namespace CodeChallengeTests
     [Fact]
     public void Reverse_Test()
     {
-      Assert.Equal(true, true);
+      Assert.Equal(true, false);
     }
 
     [Fact]
     public void IsPalindrome_Test()
     {
-      Assert.Equal(true, true);
+      Assert.Equal(true, false);
     }
   }
 }
