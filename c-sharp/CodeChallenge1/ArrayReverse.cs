@@ -6,7 +6,16 @@ namespace CodeChallenges
         public static int[] ReverseArray(int[] array)
         {
 
-            return array;
+          int[] result = new int[array.Length];
+            int rLength = result.Length;
+
+            for (int i = array.Length; i > 0; i--)
+            {
+              result[rLength - i] = array[i - 1];
+              //Console.WriteLine(array[i]);
+            }
+
+            return result;
         }
     }
 }
