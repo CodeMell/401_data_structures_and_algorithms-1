@@ -5,15 +5,21 @@ namespace CodeChallenges
 {
   public class LinkedList
   {
-    public Node Head;
+    public Node Head { get; set; }
 
-    public void AddNewNode(Node node)
+    public LinkedList()
     {
-      node.Next = Head;
-      Head = node;
+      Head = null;
     }
 
-    public bool Contains(int value)
+    public void Insert(int value)
+    {
+      Node newNode = new Node(value);
+      newNode.Next = Head;
+      Head = newNode;
+    }
+
+    public bool Includes(int value)
     {
       Node current = Head;
       while (current != null)
@@ -27,26 +33,30 @@ namespace CodeChallenges
 
     public override string ToString()
     {
-      StringBuilder sb = new StringBuilder();
+      if (Head == null)
+        return "NULL";
+
       Node current = Head;
+      string result = "";
       while (current != null)
       {
-        sb.Append($"{current.Value} -> ");
+        result += $"{current.Value} -> ";
         current = current.Next;
       }
-      sb.Append("NULL");
-      return sb.ToString();
+      result += "NULL";
+      return result;
     }
   }
 
   public class Node
   {
-    public Node Next;
-    public int Value;
+    public int Value { get; set; }
+    public Node Next { get; set; }
 
     public Node(int value)
     {
       Value = value;
+      Next = null;
     }
   }
 }
