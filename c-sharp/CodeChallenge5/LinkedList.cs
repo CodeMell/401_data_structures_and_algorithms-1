@@ -59,3 +59,5 @@ namespace CodeChallenges
       Next = null;
     }
   }
+}
+
