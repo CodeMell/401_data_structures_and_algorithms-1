@@ -10,6 +10,7 @@ namespace CodeChallenges
     public LinkedList()
     {
       Head = null;
+
     }
 
     public void Insert(int value)
