@@ -5,27 +5,33 @@ namespace CodeChallenges
   {
     public static LinkedListKth ZipLists(LinkedListKth list1, LinkedListKth list2)
     {
-      LinkedListKth result = new LinkedListKth();
+      if (list1 == null || list1.Head == null)
+        return list2;
+
+      if (list2 == null || list2.Head == null)
+        return list1;
+
       Node current1 = list1.Head;
       Node current2 = list2.Head;
 
-      while (current1 != null || current2 != null)
+      while (current1 != null && current2 != null)
       {
-        if (current1 != null)
-        {
-          result.Insert(current1.Value);
-          current1 = current1.Next;
-        }
+        Node next1 = current1.Next;
+        Node next2 = current2.Next;
 
-        if (current2 != null)
-        {
-          result.Insert(current2.Value);
-          current2 = current2.Next;
-        }
+        current2.Next = next1;
+        current1.Next = current2;
+
+        current1 = next1;
+        current2 = next2;
       }
 
-      return result;
-    }
+      if (current2 != null)
+      {
+        list1.Head = list2.Head;
+      }
 
+      return list1;
+    }
   }
 }
