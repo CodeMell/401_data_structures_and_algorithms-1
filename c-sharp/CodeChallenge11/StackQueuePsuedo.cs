@@ -1,10 +1,8 @@
-namespace StackQueuePsuedos 
+using Xunit;
+namespace CodeChallenges
 {
-    public class StackQueuePsuedo
-    {
-        public void Enqueue()
-        {
-            
-        }
-    }
+  public class StackQueuePsuedo
+  {
+
+  }
 }
