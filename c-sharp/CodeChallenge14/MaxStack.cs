@@ -55,7 +55,26 @@ namespace CodeChallenges
 
     public string DuckDuckGoose(string[] stringArray, int k)
     {
-      return "";
+      if (stringArray == null || stringArray.Length == 0)
+      {
+        throw new ArgumentException("The input array is empty or null.");
+      }
+
+      Queue<string> queue = new Queue<string>(stringArray);
+
+      while (queue.Count > 1)
+      {
+        for (int i = 1; i <= k; i++)
+        {
+          string currentPerson = queue.Dequeue();
+          if (i < k)
+          {
+            queue.Enqueue(currentPerson);
+          }
+        }
+      }
+
+      return queue.Dequeue();
     }
   }
 }
