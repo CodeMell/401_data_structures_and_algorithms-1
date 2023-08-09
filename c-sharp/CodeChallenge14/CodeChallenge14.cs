@@ -9,11 +9,9 @@ namespace CodeChallenges
 
     }
 
-    public string DuckDuckGoose(string[] stringArray, int k)
+    public static string DuckDuckGoose(string[] stringArray, int k)
     {
-        return "";
+      return "";
     }
   }
-
-
 }
